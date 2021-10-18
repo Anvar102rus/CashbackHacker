@@ -1,20 +1,20 @@
 package ru.netology;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackerTest {
     CashbackHacker service = new CashbackHacker();
 
     @Test
-    public void testRemain() {
-        assertEquals(service.remain(900),100);
+    public void remain() {
+        CashbackHacker service = new CashbackHacker();
+        assertEquals(100,service.remain(900) );
     }
     @Test
-    public void shouldCheckRemainIfAmountEqualToBoundary() {
-        assertEquals(service.remain(1000),0);
+    public void showdCheckRemainIfAmountIsEqualToBoundary() {
+        CashbackHacker service = new CashbackHacker();
+        assertEquals(0,service.remain(1000));
     }
-
-
 }
